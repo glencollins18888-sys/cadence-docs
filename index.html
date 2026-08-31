@@ -5,6 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Cadence — Meet runners at your pace</title>
 <meta name="description" content="Cadence is a dating app for runners. Match by pace, distance, running club, and the races you're training for.">
+<link rel="icon" type="image/png" href="./assets/favicon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://cadencedating.ie/">
+<meta property="og:title" content="Cadence — Meet runners at your pace">
+<meta property="og:description" content="A dating app for runners. Match by pace, distance, running club, and the races you're training for.">
+<meta property="og:image" content="https://cadencedating.ie/assets/og-image.png">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="500">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cadence — Meet runners at your pace">
+<meta name="twitter:description" content="A dating app for runners. Match by pace, distance, running club, and the races you're training for.">
+<meta name="twitter:image" content="https://cadencedating.ie/assets/og-image.png">
 <style>
   :root {
     --bg: #ffffff;
@@ -119,6 +133,11 @@
   .gallery figure { margin: 0; width: 210px; }
   .gallery img { width: 100%; border-radius: 20px; box-shadow: 0 14px 34px rgba(20, 20, 25, 0.14); display: block; }
   .gallery figcaption { text-align: center; margin-top: 14px; font-size: 13px; color: var(--muted); font-weight: 600; }
+
+  .faq { max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px; }
+  .faq-item { background: #ffffff; border: 1px solid var(--border); border-radius: 14px; padding: 20px 24px; }
+  .faq-item h3 { font-size: 15px; margin: 0 0 6px; }
+  .faq-item p { color: var(--muted); font-size: 14px; margin: 0; }
 
   .status-card {
     max-width: 640px;
@@ -235,7 +254,36 @@
     </div>
   </section>
 
-  <section id="status">
+  <section>
+    <div class="wrap">
+      <h2>Questions</h2>
+      <p class="section-sub">The short version — email us if you want more detail.</p>
+      <div class="faq">
+        <div class="faq-item">
+          <h3>Is Cadence free?</h3>
+          <p>Yes — join, build a profile, and swipe with a daily limit for free. Cadence Pro (€9.99/month) unlocks unlimited swipes, rewind, boost, seeing who liked you, and club/pace filters.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What areas is it available in?</h3>
+          <p>Cadence is launching Dublin-first, with other Irish cities opening up as more runners join from each one.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How is this different from a normal dating app?</h3>
+          <p>Matching is built around running — your pace, favourite distance, running club, and the race you're training for — not just photos and a bio. You can even search around a race you're training for instead of just near home.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Is my data safe?</h3>
+          <p>Cadence is operated from Ireland and built to GDPR requirements. Your exact location is never shown to other users — only an approximate area. Full detail is in our <a href="./privacy.html">Privacy Policy</a>.</p>
+        </div>
+        <div class="faq-item">
+          <h3>When can I actually download it?</h3>
+          <p>Cadence is in private testing right now — closed testing on Android, TestFlight review on iOS. Email us below for early access.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="status">
     <div class="wrap">
       <div class="status-card">
         <span class="eyebrow">Currently in private testing</span>
