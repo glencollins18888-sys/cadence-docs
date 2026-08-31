@@ -43,6 +43,16 @@
     padding: 72px 0 64px;
     text-align: center;
   }
+  .hero-grid { display: grid; grid-template-columns: 1fr 300px; gap: 48px; align-items: center; text-align: left; }
+  .hero-copy { text-align: left; }
+  .hero-copy .lede { margin: 0 0 32px; }
+  .hero-shot { width: 100%; max-width: 300px; border-radius: 26px; box-shadow: 0 24px 60px rgba(20, 20, 25, 0.18); display: block; }
+  @media (max-width: 760px) {
+    .hero-grid { grid-template-columns: 1fr; text-align: center; }
+    .hero-copy { text-align: center; }
+    .hero-copy .lede { margin: 0 auto 32px; }
+    .hero-shot { margin: 40px auto 0; }
+  }
   .eyebrow {
     display: inline-block;
     font-size: 11px;
@@ -105,6 +115,11 @@
   .feature h3 { font-size: 16px; margin: 0 0 6px; }
   .feature p { color: var(--muted); font-size: 14px; margin: 0; }
 
+  .gallery { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; }
+  .gallery figure { margin: 0; width: 210px; }
+  .gallery img { width: 100%; border-radius: 20px; box-shadow: 0 14px 34px rgba(20, 20, 25, 0.14); display: block; }
+  .gallery figcaption { text-align: center; margin-top: 14px; font-size: 13px; color: var(--muted); font-weight: 600; }
+
   .status-card {
     max-width: 640px;
     margin: 0 auto;
@@ -156,14 +171,17 @@
   </nav>
 
   <header class="hero">
-    <div class="wrap">
-      <span class="eyebrow">Step into love</span>
-      <h1>Meet runners at your pace.</h1>
-      <p class="lede">Cadence matches you by distance, pace, running club, and the races you're training for — so your next date already has something real in common with you.</p>
-      <div class="cta-row">
-        <a class="btn btn-primary" href="#status">Get early access</a>
-        <a class="btn btn-secondary" href="#features">See how it works</a>
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow">Step into love</span>
+        <h1>Meet runners at your pace.</h1>
+        <p class="lede">Cadence matches you by distance, pace, running club, and the races you're training for — so your next date already has something real in common with you.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#status">Get early access</a>
+          <a class="btn btn-secondary" href="#features">See how it works</a>
+        </div>
       </div>
+      <img class="hero-shot" src="./assets/shot-1_discover_maeve.webp" alt="Cadence Discover screen showing a runner's profile with pace, PB, and running club">
     </div>
   </header>
 
@@ -196,7 +214,28 @@
     </div>
   </section>
 
-  <section class="alt" id="status">
+  <section class="alt">
+    <div class="wrap">
+      <h2>See it in action</h2>
+      <p class="section-sub">A closer look at how a match actually turns into a run.</p>
+      <div class="gallery">
+        <figure>
+          <img src="./assets/shot-6_discover_sean.webp" alt="Discover screen showing a runner training for Dublin Marathon in 61 days">
+          <figcaption>Race countdown right on the card</figcaption>
+        </figure>
+        <figure>
+          <img src="./assets/shot-5_filters.webp" alt="Filters screen with the Search around a race toggle">
+          <figcaption>Search around a race, not just home</figcaption>
+        </figure>
+        <figure>
+          <img src="./assets/shot-3_accept_run_proposal.webp" alt="Chat screen showing a run proposal for Phoenix Park with Accept and Decline buttons">
+          <figcaption>Accept a run proposal in one tap</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="status">
     <div class="wrap">
       <div class="status-card">
         <span class="eyebrow">Currently in private testing</span>
