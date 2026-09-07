@@ -69,6 +69,28 @@
   ]
 }
 </script>
+<!-- Copied by hand from the app's own races table — not live-synced. Worth
+     checking twice a year (spring/autumn race seasons) so nothing here goes
+     stale or falls out of date order. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    { "@type": "Event", "name": "Fastlane Autumn Edition", "startDate": "2026-10-03", "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "location": { "@type": "Place", "name": "Dublin", "address": { "@type": "PostalAddress", "addressLocality": "Dublin", "addressCountry": "IE" } } },
+    { "@type": "Event", "name": "LauraLynn 5K & 10K", "startDate": "2026-10-10", "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "location": { "@type": "Place", "name": "Dublin", "address": { "@type": "PostalAddress", "addressLocality": "Dublin", "addressCountry": "IE" } } },
+    { "@type": "Event", "name": "Gaelforce 10K Howth", "startDate": "2026-10-10", "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "location": { "@type": "Place", "name": "Howth, Dublin", "address": { "@type": "PostalAddress", "addressLocality": "Dublin", "addressCountry": "IE" } } },
+    { "@type": "Event", "name": "Sandymount Dublin Night Run", "startDate": "2026-10-20", "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "location": { "@type": "Place", "name": "Sandymount, Dublin", "address": { "@type": "PostalAddress", "addressLocality": "Dublin", "addressCountry": "IE" } } },
+    { "@type": "Event", "name": "Dublin Marathon", "startDate": "2026-10-25", "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "location": { "@type": "Place", "name": "Dublin", "address": { "@type": "PostalAddress", "addressLocality": "Dublin", "addressCountry": "IE" } } },
+    { "@type": "Event", "name": "Santa Dash Dublin", "startDate": "2026-12-06", "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "location": { "@type": "Place", "name": "Dublin", "address": { "@type": "PostalAddress", "addressLocality": "Dublin", "addressCountry": "IE" } } },
+    { "@type": "Event", "name": "Great Ireland Run", "startDate": "2027-04-11", "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "location": { "@type": "Place", "name": "Dublin", "address": { "@type": "PostalAddress", "addressLocality": "Dublin", "addressCountry": "IE" } } },
+    { "@type": "Event", "name": "Belfast City Marathon", "startDate": "2027-05-03", "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "location": { "@type": "Place", "name": "Belfast", "address": { "@type": "PostalAddress", "addressLocality": "Belfast", "addressCountry": "GB" } } },
+    { "@type": "Event", "name": "Fastlane Summer Edition", "startDate": "2027-05-16", "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "location": { "@type": "Place", "name": "Dublin", "address": { "@type": "PostalAddress", "addressLocality": "Dublin", "addressCountry": "IE" } } },
+    { "@type": "Event", "name": "Vhi Women's Mini Marathon", "startDate": "2027-06-06", "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "location": { "@type": "Place", "name": "Dublin", "address": { "@type": "PostalAddress", "addressLocality": "Dublin", "addressCountry": "IE" } } },
+    { "@type": "Event", "name": "Cork City Marathon", "startDate": "2027-06-06", "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "location": { "@type": "Place", "name": "Cork", "address": { "@type": "PostalAddress", "addressLocality": "Cork", "addressCountry": "IE" } } },
+    { "@type": "Event", "name": "Park West Dublin Night Run", "startDate": "2027-07-20", "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "location": { "@type": "Place", "name": "Park West, Dublin", "address": { "@type": "PostalAddress", "addressLocality": "Dublin", "addressCountry": "IE" } } }
+  ]
+}
+</script>
 <style>
   :root {
     --bg: #ffffff;
@@ -184,6 +206,38 @@
   .gallery img { width: 100%; border-radius: 20px; box-shadow: 0 14px 34px rgba(20, 20, 25, 0.14); display: block; }
   .gallery figcaption { text-align: center; margin-top: 14px; font-size: 13px; color: var(--muted); font-weight: 600; }
 
+  .race-list { max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+  .race-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 16px 20px;
+  }
+  .race-item.featured { border-color: var(--accent); box-shadow: 0 8px 20px rgba(232, 83, 43, 0.12); }
+  .race-date { flex: 0 0 auto; width: 52px; text-align: center; }
+  .race-date .day { font-size: 20px; font-weight: 800; line-height: 1; color: var(--accent); }
+  .race-date .month { font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--muted); letter-spacing: 0.4px; }
+  .race-info { flex: 1; min-width: 0; }
+  .race-info h3 { font-size: 15px; margin: 0 0 2px; }
+  .race-info p { font-size: 13px; color: var(--muted); margin: 0; }
+  .race-distance {
+    flex: 0 0 auto;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent);
+    background: var(--accent-soft);
+    border-radius: 999px;
+    padding: 5px 12px;
+    white-space: nowrap;
+  }
+  @media (max-width: 480px) {
+    .race-item { gap: 12px; padding: 14px; }
+    .race-distance { display: none; }
+  }
+
   .faq { max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px; }
   .faq-item { background: #ffffff; border: 1px solid var(--border); border-radius: 14px; padding: 20px 24px; }
   .faq-item h3 { font-size: 15px; margin: 0 0 6px; }
@@ -278,6 +332,75 @@
           <div class="icon">🛡️</div>
           <h3>Safety first</h3>
           <p>Selfie verification, one-tap report and block, and a dedicated Safety Centre for every meetup.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="races">
+    <div class="wrap">
+      <h2>Races runners on Cadence are training for</h2>
+      <p class="section-sub">A few of the upcoming Irish races already set as someone's "training for" on Cadence.</p>
+      <div class="race-list">
+        <div class="race-item">
+          <div class="race-date"><div class="day">3</div><div class="month">Oct</div></div>
+          <div class="race-info"><h3>Fastlane Autumn Edition</h3><p>Dublin</p></div>
+          <span class="race-distance">Ultra</span>
+        </div>
+        <div class="race-item">
+          <div class="race-date"><div class="day">10</div><div class="month">Oct</div></div>
+          <div class="race-info"><h3>LauraLynn 5K &amp; 10K</h3><p>Dublin</p></div>
+          <span class="race-distance">5K/10K</span>
+        </div>
+        <div class="race-item">
+          <div class="race-date"><div class="day">10</div><div class="month">Oct</div></div>
+          <div class="race-info"><h3>Gaelforce 10K Howth</h3><p>Howth, Dublin</p></div>
+          <span class="race-distance">10K</span>
+        </div>
+        <div class="race-item">
+          <div class="race-date"><div class="day">20</div><div class="month">Oct</div></div>
+          <div class="race-info"><h3>Sandymount Dublin Night Run</h3><p>Sandymount, Dublin</p></div>
+          <span class="race-distance">5K</span>
+        </div>
+        <div class="race-item featured">
+          <div class="race-date"><div class="day">25</div><div class="month">Oct</div></div>
+          <div class="race-info"><h3>Dublin Marathon</h3><p>Dublin</p></div>
+          <span class="race-distance">Marathon</span>
+        </div>
+        <div class="race-item">
+          <div class="race-date"><div class="day">6</div><div class="month">Dec</div></div>
+          <div class="race-info"><h3>Santa Dash Dublin</h3><p>Dublin</p></div>
+          <span class="race-distance">5K</span>
+        </div>
+        <div class="race-item">
+          <div class="race-date"><div class="day">11</div><div class="month">Apr</div></div>
+          <div class="race-info"><h3>Great Ireland Run</h3><p>Dublin</p></div>
+          <span class="race-distance">10K</span>
+        </div>
+        <div class="race-item">
+          <div class="race-date"><div class="day">3</div><div class="month">May</div></div>
+          <div class="race-info"><h3>Belfast City Marathon</h3><p>Belfast</p></div>
+          <span class="race-distance">Marathon</span>
+        </div>
+        <div class="race-item">
+          <div class="race-date"><div class="day">16</div><div class="month">May</div></div>
+          <div class="race-info"><h3>Fastlane Summer Edition</h3><p>Dublin</p></div>
+          <span class="race-distance">Ultra</span>
+        </div>
+        <div class="race-item">
+          <div class="race-date"><div class="day">6</div><div class="month">Jun</div></div>
+          <div class="race-info"><h3>Vhi Women's Mini Marathon</h3><p>Dublin</p></div>
+          <span class="race-distance">10K</span>
+        </div>
+        <div class="race-item">
+          <div class="race-date"><div class="day">6</div><div class="month">Jun</div></div>
+          <div class="race-info"><h3>Cork City Marathon</h3><p>Cork</p></div>
+          <span class="race-distance">Marathon</span>
+        </div>
+        <div class="race-item">
+          <div class="race-date"><div class="day">20</div><div class="month">Jul</div></div>
+          <div class="race-info"><h3>Park West Dublin Night Run</h3><p>Park West, Dublin</p></div>
+          <span class="race-distance">5K</span>
         </div>
       </div>
     </div>
